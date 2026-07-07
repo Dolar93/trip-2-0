@@ -386,6 +386,13 @@
 
       <p class="timer-vibe" id="timerVibe">Kliknij Start, kiedy zaczynacie.</p>
 
+      <div class="timer-timeline">
+        <input type="range" id="timerSlider" class="timer-slider" min="0" max="600" step="1" value="0" aria-label="Przesuń, żeby ręcznie ustawić upływ czasu">
+        <div class="timer-timeline-labels" aria-hidden="true">
+          <span>0:00</span><span>2h</span><span>4h</span><span>6h</span><span>8h</span><span>10h</span>
+        </div>
+      </div>
+
       <div class="timer-controls">
         <button class="timer-btn timer-btn--start" id="timerStart" type="button">Start</button>
         <button class="timer-btn" id="timerPause" type="button" disabled>Pauza</button>

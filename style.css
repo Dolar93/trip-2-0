@@ -562,6 +562,74 @@ main { position: relative; z-index: 1; }
   transition: opacity .4s var(--ease);
 }
 
+.timer-timeline {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.6rem;
+}
+
+.timer-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,
+    rgba(255,255,255,.08) 0%,
+    var(--magenta) 12%,
+    var(--cyan) 30%,
+    var(--amber) 45%,
+    var(--cyan) 62%,
+    var(--magenta) 78%,
+    rgba(255,255,255,.06) 100%);
+  cursor: pointer;
+  outline: none;
+}
+
+.timer-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--bone);
+  border: 3px solid var(--void);
+  box-shadow: 0 0 0 2px var(--cyan), 0 0 14px rgba(78,226,236,.7);
+  cursor: grab;
+  margin-top: 0;
+}
+
+.timer-slider::-webkit-slider-thumb:active { cursor: grabbing; }
+
+.timer-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bone);
+  border: 3px solid var(--void);
+  box-shadow: 0 0 0 2px var(--cyan), 0 0 14px rgba(78,226,236,.7);
+  cursor: grab;
+}
+
+.timer-slider::-moz-range-track {
+  height: 10px;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.timer-slider:focus-visible { box-shadow: 0 0 0 3px rgba(78,226,236,.4); border-radius: 999px; }
+
+.timer-timeline-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .5rem;
+  font-family: var(--font-mono);
+  font-size: .64rem;
+  letter-spacing: .04em;
+  color: var(--bone-dim);
+  opacity: .7;
+}
+
 .timer-controls {
   position: relative;
   z-index: 1;

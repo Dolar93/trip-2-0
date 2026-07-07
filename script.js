@@ -123,7 +123,11 @@ document.addEventListener('keydown', (e) => {
   const pauseBtn = document.getElementById('timerPause');
   const resetBtn = document.getElementById('timerReset');
   const noteInput = document.getElementById('timerNoteInput');
+  const sliderEl = document.getElementById('timerSlider');
   if (!clockEl || !startBtn) return;
+
+  const SLIDER_MAX_MIN = Number(sliderEl?.max) || 600;
+  let sliderDragging = false;
 
   const STORAGE_KEY = 'trip2-timer-state';
 
@@ -213,6 +217,39 @@ document.addEventListener('keydown', (e) => {
     startBtn.disabled = state.running;
     pauseBtn.disabled = !state.running;
     resetBtn.disabled = !state.startTimestamp;
+
+    if (sliderEl && !sliderDragging) {
+      const clampedMin = Math.min(SLIDER_MAX_MIN, minutes);
+      sliderEl.value = String(Math.round(clampedMin));
+    }
+  }
+
+  function setElapsedFromMinutes(mins) {
+    const ms = mins * 60000;
+    state.accumulatedMs = ms;
+    if (state.running) {
+      state.segmentStart = Date.now();
+    }
+    // Back-calculate a start time so "Start: HH:MM" stays consistent with the slider.
+    state.startTimestamp = Date.now() - ms;
+  }
+
+  if (sliderEl) {
+    sliderEl.addEventListener('pointerdown', () => { sliderDragging = true; });
+    sliderEl.addEventListener('input', () => {
+      setElapsedFromMinutes(Number(sliderEl.value));
+      saveState();
+      render();
+    });
+    const endDrag = () => {
+      if (!sliderDragging) return;
+      sliderDragging = false;
+      saveState();
+      render();
+    };
+    sliderEl.addEventListener('pointerup', endDrag);
+    sliderEl.addEventListener('change', endDrag);
+    sliderEl.addEventListener('keyup', endDrag);
   }
 
   let tickInterval = null;
