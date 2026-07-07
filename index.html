@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRIP 2.0 — Klub</title>
+<meta name="description" content="Regulamin, muzyka i rytuały klubu TRIP 2.0. Members only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nabla:EDPT,EHLT@1..200,0..24&family=Bungee&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="mesh-bg" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<button class="focus-toggle" id="focusToggle" type="button" aria-pressed="false">
+  <span class="focus-dot"></span>
+  <span class="focus-label">Tryb Focus</span>
+</button>
+
+<nav class="portal-nav" aria-label="Nawigacja klubu">
+  <a href="#czlonkowie" class="portal-btn"><span>Członkowie</span></a>
+  <a href="#rady" class="portal-btn"><span>Rady</span></a>
+  <a href="#regulamin" class="portal-btn"><span>Regulamin</span></a>
+  <a href="#muzyka" class="portal-btn"><span>Muzyka</span></a>
+  <a href="#smaczki" class="portal-btn"><span>Smaczki</span></a>
+  <a href="#timer" class="portal-btn"><span>Timer</span></a>
+  <a href="#checklist" class="portal-btn"><span>Checklist</span></a>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="heroGl" class="hero-gl" aria-hidden="true"></canvas>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">— manifest klubu zamkniętego —</p>
+    <h1 class="hero-title" id="logoTrigger">TRIP <span>2.0</span></h1>
+    <p class="hero-motto">TRIPIĄCZKA AŻ NIE OBUDZIĄCZKA <span>(ZAŚNIĄCZKA)</span></p>
+    <p class="hero-tagline">Nie promujemy niczego. Nie instruujemy niczego.<br>Pilnujemy tylko, żeby było bezpiecznie, dobrze brzmiało i miało klasę.</p>
+    <div class="hero-scroll">↓ poznaj klub ↓</div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section" id="czlonkowie">
+    <div class="section-head">
+      <p class="section-eyebrow">Artykuł I</p>
+      <h2 class="section-title">Skład Klubu</h2>
+      <p class="section-sub">Dwóch członków, dwie karty, zero wyjątków od własnych zasad. Podpisy poniżej są prawnie wiążące wyłącznie moralnie.</p>
+    </div>
+
+    <div class="members">
+      <article class="member-profile">
+        <div class="member-photo"><img src="assets/arczi.png" alt="Portret Arcziego w szacie medytacyjnej"></div>
+        <h3 class="member-name">Arczi</h3>
+        <p class="member-title">Mistrz <span>— liczba mistrzowska 33</span></p>
+        <p class="member-numerology">33 to Liczba Mistrzowska: Mistrz Nauczyciel. W teorii — wrodzona zdolność do inspirowania innych i misja duchowa na Ziemi. W praktyce — nie potrafisz zostawić dobrze działającej rzeczy w spokoju i zawsze masz jeszcze jeden pomysł "jak to poprawić".</p>
+        <ul class="member-rules">
+          <li>
+            <span class="member-rule-emoji" aria-hidden="true">🧘</span>
+            <div><strong>Zakaz bodźcowania</strong><p>Wszechświat wysyła sygnały. "Top 10 survival hacks" na YouTube o 6 rano też — ale to nie to samo.</p></div>
+          </li>
+          <li>
+            <span class="member-rule-emoji" aria-hidden="true">🪓</span>
+            <div><strong>Zakaz 15-minutowego bushcraftowania przy aucie</strong><p>Wyciągasz scyzoryk z bagażnika i nagle CAŁY ekwipunek trzeba przełożyć od nowa. Wyjeżdżamy dziś, obiecujemy.</p></div>
+          </li>
+          <li>
+            <span class="member-rule-emoji" aria-hidden="true">📐</span>
+            <div><strong>Zakaz oceniania innych swoim porządkiem</strong><p>Szafka z przyprawami w kolejności alfabetycznej to Twoja duma. Nie każdy musi być "godny" zanim usiądzie na Twojej kanapie.</p></div>
+          </li>
+          <li>
+            <span class="member-rule-emoji" aria-hidden="true">🔁</span>
+            <div><strong>Zakaz ciągłych zmian "o 1% lepiej"</strong><p>Mistrzostwo to nie kolejna iteracja. Czasem mistrzostwo to zostawić coś, do cholery, w spokoju.</p></div>
+          </li>
+        </ul>
+        <p class="member-signature">— Arczi, Mistrz (33)</p>
+      </article>
+
+      <article class="member-profile">
+        <div class="member-photo"><img src="assets/bartek.png" alt="Portret Bartka w szacie medytacyjnej"></div>
+        <h3 class="member-name">Bartosz Dolar</h3>
+        <p class="member-title">Inicjator <span>— numerologiczna 1</span></p>
+        <p class="member-numerology">1 to numer Lidera i Inicjatora: pierwszy krok, nowy początek, silna wola. W praktyce ta silna wola jest testowana głównie przez lodówkę o 3 w nocy i chat grupowy o 2 w nocy — rzadziej przez wszechświat.</p>
+        <ul class="member-rules">
+          <li>
+            <span class="member-rule-emoji" aria-hidden="true">🍆</span>
+            <div><strong>Zakaz walenia konia</strong><p>Energia seksualna to podobno paliwo duchowe. Oszczędzaj bak.</p></div>
+          </li>
+          <li>
+            <span class="member-rule-emoji" aria-hidden="true">💨</span>
+            <div><strong>Zakaz jarania na umór</strong><p>Liderzy inicjują rzeczy. Nie inicjuj czwartego jointa "żeby dobić dzień".</p></div>
+          </li>
+          <li>
+            <span class="member-rule-emoji" aria-hidden="true">😵‍💫</span>
+            <div><strong>Zakaz tripowania w złych stanach / niewyspany</strong><p>Numer 1 zaczyna nowe rozdziały. Nie zaczynaj żadnego na trzech godzinach snu i złym humorze.</p></div>
+          </li>
+        </ul>
+        <p class="member-signature">— Bartosz Dolar, Numerologiczna 1</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="rady">
+    <div class="section-head">
+      <p class="section-eyebrow">Artykuł II</p>
+      <h2 class="section-title">Rady na Tripa</h2>
+      <p class="section-sub">Nie ogólne mądrości z internetu. Rady szyte na miarę, dla każdego z osobna, oparte na twardych dowodach z przeszłości.</p>
+    </div>
+
+    <div class="tips-columns">
+      <div class="tips-col">
+        <h3 class="tips-col-title">Dla Arcziego</h3>
+        <ul class="tips-list">
+          <li class="tip-card"><span class="tip-emoji">🎒</span><p>Plecak pakujesz raz. Rozpakowywanie i pakowanie na nowo "bo tak wygodniej" nie jest rytuałem, jest prokrastynacją w bushcraftowej masce.</p></li>
+          <li class="tip-card"><span class="tip-emoji">📴</span><p>YouTube zamknięty najpóźniej godzinę przed. Twój mózg nie potrzebuje kolejnego "10 rzeczy które musisz mieć w bagażniku", potrzebuje ciszy.</p></li>
+          <li class="tip-card"><span class="tip-emoji">🧺</span><p>Miejsce nie musi wyglądać jak rozkładówka z katalogu, żeby było bezpieczne. Odpuść inspekcję jakości.</p></li>
+          <li class="tip-card"><span class="tip-emoji">⏳</span><p>Jeśli wyjście "za 5 minut" trwa 20, to nie jest opóźnienie — to już Twój rekord życiowy. Wyjdź, zanim zaczniesz układać.</p></li>
+        </ul>
+      </div>
+
+      <div class="tips-col">
+        <h3 class="tips-col-title">Dla Bartka</h3>
+        <ul class="tips-list">
+          <li class="tip-card"><span class="tip-emoji">😴</span><p>Sen to nie opcja premium. Jeśli spałeś trzy godziny, dzisiejszy trip przekładasz na "kiedyś", nie na "spróbujemy".</p></li>
+          <li class="tip-card"><span class="tip-emoji">🚬</span><p>Jeden joint to sygnał wejścia, nie rozgrzewka przed kolejnymi trzema. Policz do jednego i zatrzymaj się na nim.</p></li>
+          <li class="tip-card"><span class="tip-emoji">📱</span><p>Ręce zajmij czymś innym niż telefonem — i tak, to też dotyczy tej drugiej rzeczy, wiesz o co chodzi.</p></li>
+          <li class="tip-card"><span class="tip-emoji">❓</span><p>Zanim zapytasz wszechświat "dlaczego", zapytaj najpierw siebie "dlaczego dzisiaj". Czasem odpowiedź to po prostu nuda.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="regulamin">
+    <div class="section-head">
+      <p class="section-eyebrow">Artykuł III</p>
+      <h2 class="section-title">Regulamin Klubu</h2>
+      <p class="section-sub">Siedem zasad. Nie do negocjacji, nie do pominięcia, spisane raz na zawsze przez i dla dwóch członków.</p>
+    </div>
+
+    <ol class="rules">
+      <li class="rule-card">
+        <span class="rule-num">I <span class="rune" aria-hidden="true" title="Gebo — dar, wymiana, zaufanie">ᚷ</span></span>
+        <h3>Zasada Zaufania</h3>
+        <p>Robisz to wyłącznie z kimś, komu ufasz w stu procentach. Zero wyjątków, zero "tym razem będzie inaczej".</p>
+      </li>
+      <li class="rule-card">
+        <span class="rule-num">II <span class="rune" aria-hidden="true" title="Othala — dom, ostoja">ᛟ</span></span>
+        <h3>Zasada Miejsca</h3>
+        <p>Znane cztery ściany. Bez pośpiechu, bez obcych progów, bez presji czasu. Miejsce ma być nudne w swojej bezpieczności.</p>
+      </li>
+      <li class="rule-card">
+        <span class="rule-num">III <span class="rune" aria-hidden="true" title="Algiz — ochrona">ᛉ</span></span>
+        <h3>Zasada Trzeźwego Anioła</h3>
+        <p>Ktoś niezaangażowany jest w zasięgu ręki — nie musi siedzieć obok, wystarczy że wie i jest dostępny.</p>
+      </li>
+      <li class="rule-card">
+        <span class="rule-num">IV <span class="rune" aria-hidden="true" title="Raido — podróż">ᚱ</span></span>
+        <h3>Zasada Braku Kontroli</h3>
+        <p>Nie walczysz z doświadczeniem. Nie próbujesz go wygrać. Płyniesz z nim albo siadasz i czekasz.</p>
+      </li>
+      <li class="rule-card">
+        <span class="rule-num">V <span class="rune" aria-hidden="true" title="Isa — cisza, bezruch">ᛁ</span></span>
+        <h3>Zasada Offline</h3>
+        <p>Telefony odłożone, powiadomienia wyłączone. Świat zewnętrzny może poczekać do jutra.</p>
+      </li>
+      <li class="rule-card">
+        <span class="rule-num">VI <span class="rune" aria-hidden="true" title="Ansuz — wiedza, przekaz">ᚨ</span></span>
+        <h3>Zasada Konsultacji</h3>
+        <p>Wszystko, co trzeba sprawdzić, sprawdza się wcześniej — u specjalisty, nie w trakcie i nie na czuja.</p>
+      </li>
+      <li class="rule-card">
+        <span class="rule-num">VII <span class="rune" aria-hidden="true" title="Dagaz — przełom, nowy dzień">ᛞ</span></span>
+        <h3>Zasada Ciszy Po</h3>
+        <p>Następny dzień jest wolny od obowiązków. Nie oceniamy doświadczenia na gorąco — integracja przychodzi z czasem.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section" id="muzyka">
+    <div class="section-head">
+      <p class="section-eyebrow">Artykuł IV</p>
+      <h2 class="section-title">Muzyczny Kompas</h2>
+      <p class="section-sub">Trzy fazy, jedna podróż. Karty wskazują konkretne utwory — przykładowe, podmieńcie na własne. Klik otwiera Spotify.</p>
+    </div>
+
+    <div class="music-columns">
+      <div class="music-col">
+        <h3 class="music-col-title">Wznoszenie</h3>
+        <p class="music-col-desc">Otwarcie. Coś przestrzennego, co nie spieszy się donikąd.</p>
+        <ul class="album-list">
+          <li class="album-card">
+            <a href="https://open.spotify.com/search/Brian%20Eno%201%2F1" target="_blank" rel="noopener">
+              <div class="album-art" style="--a:#FF3EA5; --b:#4EE2EC;"></div>
+              <div class="album-meta">
+                <span class="album-title">1/1</span>
+                <span class="album-artist">Brian Eno · Ambient 1: Music for Airports</span>
+              </div>
+              <span class="album-badge">przykład</span>
+            </a>
+          </li>
+          <li class="album-card">
+            <a href="https://open.spotify.com/search/Boards%20of%20Canada%20Roygbiv" target="_blank" rel="noopener">
+              <div class="album-art" style="--a:#4EE2EC; --b:#FFB454;"></div>
+              <div class="album-meta">
+                <span class="album-title">Roygbiv</span>
+                <span class="album-artist">Boards of Canada · Music Has the Right to Children</span>
+              </div>
+              <span class="album-badge">przykład</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="music-col">
+        <h3 class="music-col-title">Płynięcie</h3>
+        <p class="music-col-desc">Środek. Tekstury, powtarzalność, coś co niesie zamiast prowadzić.</p>
+        <ul class="album-list">
+          <li class="album-card">
+            <a href="https://open.spotify.com/search/Tame%20Impala%20The%20Less%20I%20Know%20The%20Better" target="_blank" rel="noopener">
+              <div class="album-art" style="--a:#FFB454; --b:#FF3EA5;"></div>
+              <div class="album-meta">
+                <span class="album-title">The Less I Know the Better</span>
+                <span class="album-artist">Tame Impala · Currents</span>
+              </div>
+              <span class="album-badge">przykład</span>
+            </a>
+          </li>
+          <li class="album-card">
+            <a href="https://open.spotify.com/search/Alice%20Coltrane%20Journey%20in%20Satchidananda" target="_blank" rel="noopener">
+              <div class="album-art" style="--a:#4EE2EC; --b:#FF3EA5;"></div>
+              <div class="album-meta">
+                <span class="album-title">Journey in Satchidananda</span>
+                <span class="album-artist">Alice Coltrane</span>
+              </div>
+              <span class="album-badge">przykład</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="music-col">
+        <h3 class="music-col-title">Lądowanie</h3>
+        <p class="music-col-desc">Schyłek dnia. Ciepło, miękko, coraz cichej.</p>
+        <ul class="album-list">
+          <li class="album-card">
+            <a href="https://open.spotify.com/search/Nils%20Frahm%20Says" target="_blank" rel="noopener">
+              <div class="album-art" style="--a:#FFB454; --b:#4EE2EC;"></div>
+              <div class="album-meta">
+                <span class="album-title">Says</span>
+                <span class="album-artist">Nils Frahm · Spaces</span>
+              </div>
+              <span class="album-badge">przykład</span>
+            </a>
+          </li>
+          <li class="album-card">
+            <a href="https://open.spotify.com/search/Bonobo%20Kerala" target="_blank" rel="noopener">
+              <div class="album-art" style="--a:#FF3EA5; --b:#FFB454;"></div>
+              <div class="album-meta">
+                <span class="album-title">Kerala</span>
+                <span class="album-artist">Bonobo · Migration</span>
+              </div>
+              <span class="album-badge">przykład</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="smaczki">
+    <div class="section-head">
+      <p class="section-eyebrow">Artykuł V</p>
+      <h2 class="section-title">Smaczki Psychonauty</h2>
+      <p class="section-sub">Kultura, historia, filozofia. Kliknij kartę, żeby ją odwrócić.</p>
+    </div>
+
+    <div class="flashcards">
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>01</span><p>Skąd słowo "psychonauta"?</p></div>
+          <div class="flashcard-face flashcard-back"><p>Ukuł je niemiecki pisarz Ernst Jünger w latach 70., łącząc "psyche" (dusza/umysł) z "nautes" (żeglarz). Dosłownie: żeglarz umysłu.</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>02</span><p>Kto ukuł "set i setting"?</p></div>
+          <div class="flashcard-face flashcard-back"><p>Termin spopularyzował Timothy Leary w latach 60. — "set" to nastawienie psychiczne, "setting" to otoczenie. Oba decydują o charakterze doświadczenia bardziej niż cokolwiek innego.</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>03</span><p>Co wydarzyło się 19 kwietnia 1943?</p></div>
+          <div class="flashcard-face flashcard-back"><p>"Bicycle Day". Albert Hofmann wraca rowerem do domu po pierwszym świadomym eksperymencie z LSD. Data stała się nieoficjalnym świętem psychonautów.</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>04</span><p>Co Alan Watts mówił o fali?</p></div>
+          <div class="flashcard-face flashcard-back"><p>"Jesteś tym wszechświatem, który doświadcza samego siebie." Watts porównywał ego do fali nieświadomej, że jest oceanem — jedna z jego ulubionych metafor.</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>05</span><p>Skąd tytuł "The Doors of Perception"?</p></div>
+          <div class="flashcard-face flashcard-back"><p>Aldous Huxley zapożyczył go od Williama Blake'a: "Gdyby drzwi percepcji zostały oczyszczone, wszystko jawiłoby się człowiekowi takim, jakim jest — nieskończonym."</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>06</span><p>Co łączy McKennę z grzybami?</p></div>
+          <div class="flashcard-face flashcard-back"><p>Terence McKenna spopularyzował "Stoned Ape Theory" — hipotezę, że grzyby psylocybinowe mogły odegrać rolę w ewolucji ludzkiej świadomości. Naukowo mocno kontrowersyjna, kulturowo nieśmiertelna.</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>07</span><p>Czym jest "Ego Death"?</p></div>
+          <div class="flashcard-face flashcard-back"><p>Termin z psychologii transpersonalnej opisujący chwilowe rozpuszczenie poczucia odrębnego "ja". Bywa opisywany jako najbardziej przerażające albo najbardziej wyzwalające doświadczenie życia — zależnie od dnia.</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>08</span><p>Skąd nazwa "psychodeliczny"?</p></div>
+          <div class="flashcard-face flashcard-back"><p>Ukuł ją w 1956 roku psychiatra Humphry Osmond w liście do Aldousa Huxleya, z greckiego "psyche" (umysł) i "delein" (ujawniać). Dosłownie: "ujawniający umysł".</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>09</span><p>Co to "mapa nie jest terytorium"?</p></div>
+          <div class="flashcard-face flashcard-back"><p>Zasada Alfreda Korzybskiego, uwielbiana przez psychonautów: opis doświadczenia (słowa, teorie, wierzenia) nigdy nie jest tym samym co samo doświadczenie. Warto pamiętać, zanim ktoś zacznie tłumaczyć Ci wszechświat o 4 nad ranem.</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>10</span><p>Co Carl Jung mówił o cieniu?</p></div>
+          <div class="flashcard-face flashcard-back"><p>"Dopóki nie uczynisz nieświadomego świadomym, będzie ono kierować Twoim życiem, a Ty nazwiesz to przeznaczeniem." Jungowska koncepcja Cienia to fundament większości nowoczesnej pracy z integracją doświadczeń.</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>11</span><p>Czym jest Kwiat Życia?</p></div>
+          <div class="flashcard-face flashcard-back"><p>Wzór nakładających się okręgów znany od starożytnego Egiptu po Indie i Japonię. Fundament tzw. świętej geometrii — figury, w której niektórzy widzą uniwersalny plan budowy materii, a inni po prostu ładny wzór na suficie.</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>12</span><p>Dlaczego złoty podział wraca w wizjach?</p></div>
+          <div class="flashcard-face flashcard-back"><p>Proporcja 1,618 (φ) pojawia się w muszlach, galaktykach i roślinach — i regularnie w relacjach z doświadczeń psychodelicznych. Neuronauka podejrzewa, że mózg po prostu uwielbia wzory samopodobne, niezależnie od okazji.</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>13</span><p>Skąd wizje fraktalne?</p></div>
+          <div class="flashcard-face flashcard-back"><p>Matematyk Benoit Mandelbrot ukuł "fraktal" w 1975 roku dla kształtów samopodobnych w każdej skali. Kora wzrokowa podczas silnych doświadczeń bywa opisywana jako generator właśnie takich powtarzalnych, zagnieżdżonych wzorów.</p></div>
+        </div>
+      </button>
+      <button class="flashcard" type="button">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span>14</span><p>Po co komu mandala?</p></div>
+          <div class="flashcard-face flashcard-back"><p>Carl Jung rysował mandale codziennie, uznając je za mapę procesu integracji psychiki — symetryczny środek, wokół którego porządkuje się chaos. W buddyzmie tybetańskim mandale z piasku niszczy się zaraz po ukończeniu, na dowód, że nic nie trzeba trzymać na zawsze.</p></div>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <section class="section" id="timer">
+    <div class="section-head">
+      <p class="section-eyebrow">Artykuł VI</p>
+      <h2 class="section-title">Trip Timer</h2>
+      <p class="section-sub">Zwykły stoper z falą i klimatem. Nie liczy dawek, nie zna farmakologii, nie zgaduje "etapu" — mierzy czas i trzyma nastrój. Reszty pilnujecie sami.</p>
+    </div>
+
+    <div class="timer-widget">
+      <div class="timer-wave" id="timerWave" data-phase="idle" aria-hidden="true">
+        <span class="timer-wave-layer timer-wave-layer--1"></span>
+        <span class="timer-wave-layer timer-wave-layer--2"></span>
+        <span class="timer-wave-layer timer-wave-layer--3"></span>
+      </div>
+
+      <div class="timer-face">
+        <span class="timer-clock" id="timerClock">00:00:00</span>
+        <span class="timer-start-label" id="timerStartLabel">Nie wystartowano</span>
+      </div>
+
+      <p class="timer-vibe" id="timerVibe">Kliknij Start, kiedy zaczynacie.</p>
+
+      <div class="timer-controls">
+        <button class="timer-btn timer-btn--start" id="timerStart" type="button">Start</button>
+        <button class="timer-btn" id="timerPause" type="button" disabled>Pauza</button>
+        <button class="timer-btn timer-btn--reset" id="timerReset" type="button" disabled>Reset</button>
+      </div>
+
+      <div class="timer-note">
+        <label for="timerNoteInput">Notatka — tylko dla Was, zapisana lokalnie w tej przeglądarce</label>
+        <input type="text" id="timerNoteInput" placeholder="miejsce, nastrój, cokolwiek — Wasza sprawa" maxlength="140" autocomplete="off">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="checklist">
+    <div class="section-head">
+      <p class="section-eyebrow">Artykuł VII</p>
+      <h2 class="section-title">Checklist Dnia</h2>
+      <p class="section-sub">Logistyka, nic więcej. Odhacz przed startem — stan zapisuje się lokalnie w przeglądarce.</p>
+    </div>
+
+    <ul class="checklist" id="checklistList">
+      <li class="checklist-item"><label><input type="checkbox" data-key="jedzenie"><span class="check-box"></span>Jedzenie przygotowane na później</label></li>
+      <li class="checklist-item"><label><input type="checkbox" data-key="miejsce"><span class="check-box"></span>Miejsce posprzątane i wolne od ostrych krawędzi</label></li>
+      <li class="checklist-item"><label><input type="checkbox" data-key="telefony"><span class="check-box"></span>Telefony na cichym, powiadomienia wyłączone</label></li>
+      <li class="checklist-item"><label><input type="checkbox" data-key="playlisty"><span class="check-box"></span>Playlisty gotowe i przetestowane</label></li>
+      <li class="checklist-item"><label><input type="checkbox" data-key="aniol"><span class="check-box"></span>Trzeźwy Anioł poinformowany i dostępny</label></li>
+      <li class="checklist-item"><label><input type="checkbox" data-key="ladowarki"><span class="check-box"></span>Ładowarki i głośnik w zasięgu</label></li>
+      <li class="checklist-item"><label><input type="checkbox" data-key="woda"><span class="check-box"></span>Woda i coś na wszelki wypadek pod ręką</label></li>
+      <li class="checklist-item"><label><input type="checkbox" data-key="jutro"><span class="check-box"></span>Następny dzień wolny od obowiązków</label></li>
+    </ul>
+    <button class="reset-checklist" id="resetChecklist" type="button">Wyczyść checklistę</button>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="member-card">
+    <div class="member-card-top">
+      <span class="member-card-label">KLUB TRIP 2.0</span>
+      <span class="member-card-stamp">WAŻNA BEZTERMINOWO</span>
+    </div>
+    <div class="member-card-num">N° 002 / 002</div>
+    <div class="member-card-bottom">
+      <span>Członkostwo niezbywalne</span>
+      <span>Est. 2026</span>
+    </div>
+  </div>
+  <p class="footer-note">Ta strona nie zawiera instrukcji użycia niczego. Zawiera atmosferę, muzykę i zasady. Reszta jest waszą sprawą.</p>
+</footer>
+
+<div class="easter-egg" id="easterEgg" aria-hidden="true">
+  <div class="easter-egg-inner">
+    <p class="easter-egg-eyebrow">— sekcja niejawna —</p>
+    <p class="easter-egg-text">Skoro tu jesteś: dziękujemy, że robicie to razem, mądrze i z klasą.<br>Do zobaczenia po drugiej stronie.</p>
+    <button class="easter-egg-close" id="easterEggClose" type="button">zamknij</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
