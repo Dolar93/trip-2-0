@@ -272,12 +272,25 @@
     <div class="music-featured">
       <div class="music-featured-head">
         <span class="music-featured-tag">częstotliwość klubowa</span>
-        <h3 class="music-featured-title">110 Hz</h3>
+        <h3 class="music-featured-title" id="musicFeaturedTitle">110 Hz</h3>
       </div>
+
+      <div class="music-tabs" id="musicTabs" role="tablist">
+        <button class="music-tab is-active" type="button" role="tab" aria-selected="true"
+          data-video="S-DzO63n2Ok" data-title="110 Hz Music for Sleep and Meditation">110 Hz</button>
+        <button class="music-tab" type="button" role="tab" aria-selected="false"
+          data-video="ihEvlTKiYx8" data-title="BUSHIDŌ — Japanese Samurai Ambience for Calm Focus &amp; Inner Balance">Bushidō</button>
+        <button class="music-tab" type="button" role="tab" aria-selected="false"
+          data-video="3GugTOX9QyM" data-title="KOI — Japanese Samurai Ambience for Flow &amp; Stillness">Koi</button>
+        <button class="music-tab" type="button" role="tab" aria-selected="false"
+          data-video="on9aQbk4kXg" data-title="Unblock All 7 Chakras — 432 Hz Meditation">432 Hz Czakry</button>
+      </div>
+
       <div class="music-featured-frame">
         <iframe
+          id="musicFeaturedFrame"
           src="https://www.youtube-nocookie.com/embed/S-DzO63n2Ok"
-          title="110 Hz"
+          title="110 Hz Music for Sleep and Meditation"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>

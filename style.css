@@ -877,6 +877,36 @@ body.focus-mode .timer-wave-layer { animation: none; }
   color: transparent;
 }
 
+.music-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .6rem;
+  margin-bottom: 1.2rem;
+}
+
+.music-tab {
+  font-family: var(--font-mono);
+  font-size: .76rem;
+  letter-spacing: .04em;
+  padding: .8em 1em;
+  border-radius: 12px;
+  border: 1px solid rgba(243,237,228,.14);
+  background: rgba(255,255,255,.03);
+  color: var(--bone-dim);
+  cursor: pointer;
+  text-align: center;
+  transition: all .3s var(--ease);
+}
+
+.music-tab:hover { border-color: rgba(78,226,236,.4); color: var(--bone); }
+
+.music-tab.is-active {
+  background: linear-gradient(120deg, var(--magenta), var(--cyan));
+  border-color: transparent;
+  color: var(--void);
+  font-weight: 600;
+}
+
 .music-featured-frame {
   position: relative;
   width: 100%;

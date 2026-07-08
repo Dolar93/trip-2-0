@@ -295,6 +295,32 @@ document.addEventListener('keydown', (e) => {
   if (state.running) startTicking();
 })();
 
+// ===== Music tabs =====
+(function initMusicTabs() {
+  const tabs = document.querySelectorAll('.music-tab');
+  const frame = document.getElementById('musicFeaturedFrame');
+  const titleEl = document.getElementById('musicFeaturedTitle');
+  if (!tabs.length || !frame) return;
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      if (tab.classList.contains('is-active')) return;
+      tabs.forEach((t) => {
+        t.classList.remove('is-active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+
+      const videoId = tab.dataset.video;
+      const title = tab.dataset.title;
+      frame.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
+      frame.title = title;
+      if (titleEl) titleEl.textContent = tab.textContent;
+    });
+  });
+})();
+
 // ===== Hero WebGL background =====
 (function initHeroGL() {
   const canvas = document.getElementById('heroGl');
