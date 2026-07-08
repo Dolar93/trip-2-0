@@ -842,6 +842,60 @@ body.focus-mode .timer-wave-layer { animation: none; }
   flex-shrink: 0;
 }
 
+/* ===== Music featured player ===== */
+.music-featured {
+  margin-top: 2.4rem;
+  padding: 1.8rem;
+  border-radius: 24px;
+  background: linear-gradient(160deg, var(--panel), var(--panel-2));
+  border: 1px solid rgba(243,237,228,.08);
+}
+
+.music-featured-head {
+  display: flex;
+  align-items: baseline;
+  gap: .8rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.music-featured-tag {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.music-featured-title {
+  font-family: var(--font-display-alt);
+  font-size: 1.3rem;
+  margin: 0;
+  background: linear-gradient(120deg, var(--magenta), var(--amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.music-featured-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(243,237,228,.1);
+  box-shadow: 0 0 40px rgba(255,62,165,.1);
+  background: var(--void);
+}
+
+.music-featured-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* ===== Flashcards ===== */
 .flashcards {
   display: grid;
